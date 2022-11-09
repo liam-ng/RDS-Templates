@@ -416,7 +416,7 @@
     {
       "apiVersion": "2018-11-01",
       "type": "Microsoft.Network/networkInterfaces",
-      "name": "[concat(parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber')), '-nic')]",
+      "name": "[concat('nic01-',parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber')))]",
       "location": "[parameters('location')]",
       "tags": "[parameters('networkInterfaceTags')]",
       "copy": {
@@ -470,6 +470,7 @@
         "securityProfile": "[if(equals(parameters('securityType'), 'TrustedLaunch'), variables('securityProfile'), json('null'))]",
         "storageProfile": {
           "osDisk": {
+            "name": "[concat('disk01-',parameters('rdshPrefix'), copyindex(), parameters('vmInitialNumber'))]",
             "createOption": "FromImage",
             "managedDisk": {
               "storageAccountType": "[variables('storageAccountType')]"
