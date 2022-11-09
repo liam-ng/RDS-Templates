@@ -483,7 +483,7 @@
         "networkProfile": {
           "networkInterfaces": [
             {
-                "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('nic01-',parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber'))))]"
+                "id": "[resourceId('Microsoft.Network/networkInterfaces',concat('nic01-', parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber'))))]"
             }
           ]
         },
