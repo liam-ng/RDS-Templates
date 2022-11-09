@@ -454,7 +454,7 @@
         "count": "[parameters('rdshNumberOfInstances')]"
       },
       "dependsOn": [
-        "[concat('Microsoft.Network/networkInterfaces/', parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber')), '-nic')]"
+          "[concat('Microsoft.Network/networkInterfaces/', 'nic01-', parameters('rdshPrefix'), add(copyindex(), parameters('vmInitialNumber')))]"
       ],
       "identity": "[variables('vmIdentity')]",
       "properties": {
