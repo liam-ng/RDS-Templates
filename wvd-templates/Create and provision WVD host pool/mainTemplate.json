@@ -457,6 +457,7 @@
             "properties": {
                 "storageProfile": {
                     "osDisk": {
+                        "name": "[concat('disk01-',parameters('virtualMachineName'))]",
                         "osType": "Windows",
                         "osState": "Generalized",
                         "blobUri": "[parameters('vmImageVhdUri')]",
@@ -468,7 +469,7 @@
         {
             "apiVersion": "2018-11-01",
             "type": "Microsoft.Network/networkInterfaces",
-            "name": "[concat(variables('rdshPrefix'), copyindex(), '-nic')]",
+            "name": "[concat('nic01-',variables('rdshPrefix'), copyindex())]",
             "location": "[parameters('location')]",
             "dependsOn": [
                 "[concat('Microsoft.Compute/availabilitySets/', variables('rdshPrefix'), 'availabilitySet')]"
