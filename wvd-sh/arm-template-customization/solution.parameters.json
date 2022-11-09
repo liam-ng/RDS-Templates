@@ -3,19 +3,19 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "Location": {
-            "value": ""
+            "value": "eastasia"
         },
         "NamePrefix": {
-            "value": ""
+            "value": "vmavdshared"
         },
         "NumberOfVms": {
-            "value": 1
+            "value": 2
         },
         "ScriptUri": {
-            "value": ""
+            "value": "https://github.com/liam-ng/RDS-Templates/blob/ee52688b43ca2f7702b5a8c56d7abb2eae03c3f5/wvd-sh/arm-template-customization/script.ps1"
         },
         "VirtualMachineIndex": {
-            "value": 0
+            "value": 2
         }
     }
 }
